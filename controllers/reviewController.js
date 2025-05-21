@@ -6,6 +6,8 @@ export async function addReview(req, res) {
     const bookId = req.params.id;
     const userId = req.user.userId;
 
+    console.log(rating);
+
     if (!rating || rating < 1 || rating > 5) {
       return res.status(400).json({ error: 'Rating must be between 1 and 5' });
     }

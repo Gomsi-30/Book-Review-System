@@ -16,3 +16,6 @@ export default (req, res, next) => {
     return res.status(401).json({ error: 'Invalid token' });
   }
 };
+
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODJkMzlmMGZjNjYzOGNlMjIxM2Y5ZGEiLCJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3NDc3OTQ1NjMsImV4cCI6MTc0ODM5OTM2M30.aLDJ64CvhoHRa4e6lJaaQOooQ8Qs03ULqxCLhPUvj4U

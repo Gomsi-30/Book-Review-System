@@ -42,7 +42,7 @@ book-review-api/
 └── README.md        # This file
 ```
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone the Repo
 ```bash
@@ -68,29 +68,29 @@ JWT_SECRET=your_jwt_secret_key
 npm run dev
 ```
 
-## 🧪 Example API Requests (cURL)
+##  Example API Requests (cURL)
 
 ### Signup
 ```bash
-curl -X POST http://localhost:5000/signup -H "Content-Type: application/json" -d '{"username": "john", "password": "123456"}'
+curl -X POST http://localhost:5000/api/signup -H "Content-Type: application/json" -d '{"username": "john", "password": "123456"}'
 ```
 
 ### Login
 ```bash
-curl -X POST http://localhost:5000/login -H "Content-Type: application/json" -d '{"username": "john", "password": "123456"}'
+curl -X POST http://localhost:5000/api/login -H "Content-Type: application/json" -d '{"username": "john", "password": "123456"}'
 ```
 
 ### Add Book (Auth Required)
 ```bash
-curl -X POST http://localhost:5000/books -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d '{"title": "Atomic Habits", "author": "James Clear", "genre": "Self-help"}'
+curl -X POST http://localhost:5000/api/books -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d '{"title": "Atomic Habits", "author": "James Clear", "genre": "Self-help"}'
 ```
 
 ### Submit Review
 ```bash
-curl -X POST http://localhost:5000/books/<book_id>/reviews -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d '{"rating": 5, "comment": "Amazing book!"}'
+curl -X POST http://localhost:5000/api/books/<book_id>/reviews -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" -d '{"rating": 5, "comment": "Amazing book!"}'
 ```
 
-## 🗃️ Database Schema
+##  Database Schema
 
 ### User
 ```js

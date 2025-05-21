@@ -1,5 +1,6 @@
 // Placeholder for bookRoutes.js
 import { Router } from 'express';
+import Book from '../models/Book.js'
 const router = Router();
 import { addBook, getBooks, getBookById } from '../controllers/bookController.js';
 import authMiddleware from '../middleware/authMiddleware.js';
@@ -14,7 +15,7 @@ router.get('/search', async (req, res) => {
     if(!q) return res.status(400).json({ error: 'Query parameter q is required' });
 
     const regex = new RegExp(q, 'i');
-    const books = await require('../models/Book').find({
+    const books = await Book.find({
       $or: [{ title: regex }, { author: regex }]
     });
 

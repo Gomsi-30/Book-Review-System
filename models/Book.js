@@ -1,4 +1,3 @@
-// Placeholder for Book.js
 import { Schema, model } from 'mongoose';
 
 const bookSchema = new Schema({

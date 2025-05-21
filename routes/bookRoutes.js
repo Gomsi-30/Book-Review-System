@@ -1,9 +1,9 @@
-// Placeholder for bookRoutes.js
 import { Router } from 'express';
 import Book from '../models/Book.js'
-const router = Router();
 import { addBook, getBooks, getBookById } from '../controllers/bookController.js';
 import authMiddleware from '../middleware/authMiddleware.js';
+
+const router = Router();
 
 router.post('/books', authMiddleware, addBook);
 router.get('/books', getBooks);

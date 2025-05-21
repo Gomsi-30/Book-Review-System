@@ -1,4 +1,3 @@
-// Placeholder for Review.js
 import { Schema, model } from 'mongoose';
 
 const reviewSchema = new Schema({

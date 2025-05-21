@@ -1,4 +1,3 @@
-// Placeholder for db.js
 import mongoose from 'mongoose';
 
 async function connectDB() {

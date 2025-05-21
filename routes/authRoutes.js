@@ -1,7 +1,7 @@
-// Placeholder for authRoutes.js
 import { Router } from 'express';
-const router = Router();
 import { signup, login } from '../controllers/authController.js';
+
+const router = Router();
 
 router.post('/signup', signup);
 router.post('/login', login);

@@ -8,25 +8,20 @@ import reviewRoutes from './routes/reviewRoutes.js';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js'; 
 
-// MongoDB connect
+// ENV CONFIG
 dotenv.config();
 
 const app = express();
 app.use(json());
 
+// DB CONNECTION
 connectDB();
-
-app.get('/path', (req, res) => {
-  // yahan request handle karo
-  res.send('Hello World');
-});
-
 
 app.use('/api', authRoutes);
 app.use('/api', bookRoutes);
 app.use('/api', reviewRoutes);
 
-// Global error handler
+// GLOBAL ERROR HANDLER
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
